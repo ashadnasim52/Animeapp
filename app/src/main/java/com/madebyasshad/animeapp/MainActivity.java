@@ -134,11 +134,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
     private void parsejson()
     {
-        //0bf33691eb6c439fa8bfe862bc6fe619
-        //https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=API_KEY
 
-        //https://newsapi.org/v2/everything?q=anime&sortBy=publishedAt&apiKey=0bf33691eb6c439fa8bfe862bc6fe619
-        String myurl="https://newsapi.org/v2/everything?q=anime&sortBy=publishedAt&apiKey=0bf33691eb6c439fa8bfe862bc6fe619";
+        String myurl="your-api-key";
         JsonObjectRequest jsonObjectRequest=new JsonObjectRequest(Request.Method.GET, myurl, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
@@ -148,7 +145,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     for (int i=0;i<jsonArray.length();i++)
                     {
                         JSONObject jsonObje=jsonArray.getJSONObject(i);
-                        
+
                     }
 
                 } catch (JSONException e) {
